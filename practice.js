@@ -4,13 +4,13 @@
 // in this case, it does. 
 
 // Does the function need to return a value?
-// Yes, otherwise it is not "pure", would return undefined
+// Generally yes
 
 // Am I referencing the return value with a variable?
-// Yes, through the function
+// Yes, in the function scope before conditional statements if any
 
 // What should I do with the return value?
-// Reference it in a new variable
+// Reference it in the global scope
 
 // What happens if I don't provide an argument at all?
 // undefined
@@ -20,18 +20,20 @@
 
 
 const favoriteDog = (dogBreed) => {
-    
+    let favoriteDogBreedSentence = ""
     if (dogBreed === "meow"){
-        const cats = "I like cats"
-        return cats
+        favoriteDogBreedSentence = "I like cats"
+    } else {
+        favoriteDogBreedSentence = `My favorite dog breed is ${dogBreed}`
     }
-    const myFavoriteDogBreed = `My favorite dog breed is ${dogBreed}`
-        return myFavoriteDogBreed 
+    return favoriteDogBreedSentence    
 }
 
 const myFavorite = favoriteDog("meow")
 
-// console.log(`As far as pets go, ${myFavorite}`)
+console.log(`As far as pets go, ${myFavorite}`)
+
+
 
 // Addition
 
@@ -48,5 +50,20 @@ const add = (number1, number2, number3) => {
     const sum = number2 + number3 + number1  
     return sum
 }
-console.log(add (17, 4, 11))
+// console.log(add (17, 4, 11))
 
+// Self-driving cars
+
+const go = (direction, speed) => {
+    
+    if (speed > 75){
+    const tooFast = `The car is moving ${direction} at ${speed} mph. SLOW DOWN!`
+    return tooFast
+    }
+    const goingTheDistance = `The car is moving ${direction} at ${speed} mph.`
+    return goingTheDistance
+}
+
+const moving = go ("forwards", 80)
+
+console.log(moving)
