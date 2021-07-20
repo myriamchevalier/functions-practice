@@ -83,17 +83,25 @@
 // It should return the string "Odd" if the number is not evenly divisible by two.
 // Log the result of the function.
 
-const evenOrOdd = (number) => {
-    let evenOrOddString = ""
+// const evenOrOdd = (number) => {
+//     let evenOrOddString = ""
 
-    if (number % 2 === 0){
-        evenOrOddString = "Even"
-    } else {
-        evenOrOddString = "Odd"
-    }
+//     if (number % 2 === 0){
+//         evenOrOddString = "Even"
+//     } else {
+//         evenOrOddString = "Odd"
+//     }
 
-    return evenOrOddString
-}
+//     return evenOrOddString
+// }
+
+
+// const numbers = [1, 2, 3, 4, 5]
+
+// for (const number of numbers) {
+//     isEvenOrOdd = evenOrOdd(number)
+//     console.log(isEvenOrOdd)
+// }
 
 // isEvenOrOdd = evenOrOdd(3)
 
@@ -102,10 +110,51 @@ const evenOrOdd = (number) => {
 // Exploration Tasks
 // Create an array of numbers outside the function. Some even, some odd. After the function is defined, iterate the array of numbers with a for..of loop, and invoke the evenOrOdd function with each number as the argument.
 // What happens when you pass the argument value of 0?
+// Everything becomes even
 
-const numbers = [1, 2, 3, 4, 5, 0]
+// Double functions
 
-for (const number of numbers) {
-    isEvenOrOdd = evenOrOdd(number)
-    console.log(isEvenOrOdd)
+const words = [
+    "The", "killing", "complex", "houses",
+    "married", "kittens", "and", "single",
+    "soldiers", "and", "their", "kleptomaniacal",
+    "families"
+]
+
+const filterKWords = (wordsArray) => {
+        const filteredWords = []
+
+        for (word of words) {
+        if (word.startsWith("k") === false){
+            filteredWords.push(word)
+        }
+        console.log(filteredWords)
+    }
 }
+
+const newArrayOfWords = filterKWords(words)
+
+
+/*
+    Function to filter out `k` words
+    (Google 'javascript startswith' to get started)
+ */
+
+/*
+    Function to build a single string from the array
+    (Google 'javascript combine all items in array' to get started)
+ */
+
+
+/*
+    Invoke the filtering function and store its return value
+ */
+
+
+/*
+    Invoke the string building function, and pass the
+    return value of the previous function as an argument
+*/
+
+
+console.log()
