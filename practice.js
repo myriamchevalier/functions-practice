@@ -57,17 +57,55 @@
 
 // Self-driving cars
 
-const go = (direction, speed) => {
-    let sentence = ""
+
+
+// const go = (direction, speed) => {
+//     let sentence = ""
     
-    if (speed > 75){
-    sentence = `The car is moving ${direction} at ${speed} mph. SLOW DOWN!`
+//     if (speed > 75){
+//     sentence = `The car is moving ${direction} at ${speed} mph. SLOW DOWN!`
+//     } else {
+//     sentence = `The car is moving ${direction} at ${speed} mph.`
+//     }
+//     return sentence
+// }
+
+// const movingCar = go ("forwards", 80)
+
+// console.log(movingCar)
+
+
+
+// Even or Odd ?
+
+// Design a function named evenOrOdd that takes a single number as an argument.
+// It should return the string "Even" if the number is evenly divisible by two.
+// It should return the string "Odd" if the number is not evenly divisible by two.
+// Log the result of the function.
+
+const evenOrOdd = (number) => {
+    let evenOrOddString = ""
+
+    if (number % 2 === 0){
+        evenOrOddString = "Even"
     } else {
-    sentence = `The car is moving ${direction} at ${speed} mph.`
+        evenOrOddString = "Odd"
     }
-    return sentence
+
+    return evenOrOddString
 }
 
-const movingCar = go ("forwards", 80)
+// isEvenOrOdd = evenOrOdd(3)
 
-console.log(movingCar)
+// console.log(isEvenOrOdd)
+
+// Exploration Tasks
+// Create an array of numbers outside the function. Some even, some odd. After the function is defined, iterate the array of numbers with a for..of loop, and invoke the evenOrOdd function with each number as the argument.
+// What happens when you pass the argument value of 0?
+
+const numbers = [1, 2, 3, 4, 5, 0]
+
+for (const number of numbers) {
+    isEvenOrOdd = evenOrOdd(number)
+    console.log(isEvenOrOdd)
+}
