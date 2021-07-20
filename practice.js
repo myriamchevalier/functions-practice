@@ -19,26 +19,26 @@
 // Syntax errors
 
 
-const favoriteDog = (dogBreed) => {
-    let favoriteDogBreedSentence = ""
-    if (dogBreed === "meow"){
-        favoriteDogBreedSentence = "I like cats"
-    } else {
-        favoriteDogBreedSentence = `My favorite dog breed is ${dogBreed}`
-    }
-    return favoriteDogBreedSentence    
-}
+// const favoriteDog = (dogBreed) => {
+//     let favoriteDogBreedSentence = ""
+//     if (dogBreed === "meow"){
+//         favoriteDogBreedSentence = "I like cats"
+//     } else {
+//         favoriteDogBreedSentence = `My favorite dog breed is ${dogBreed}`
+//     }
+//     return favoriteDogBreedSentence    
+// }
 
-const myFavorite = favoriteDog("meow")
+// const myFavorite = favoriteDog("meow")
 
-console.log(`As far as pets go, ${myFavorite}`)
+// console.log(`As far as pets go, ${myFavorite}`)
 
 
 
 // Addition
 
 // Switch the order of your parameters. For example, if your parameters are (first, second, third), then change it to (second, first, third). What effect does that have on the unit of work?
-// No effect, but could be different with another kind of operation.
+// No effect, but could be different with another kind of operation
 
 // Remove one parameter, but not the others. Does the function still work?
 // No
@@ -46,24 +46,28 @@ console.log(`As far as pets go, ${myFavorite}`)
 // Change the order of the variables when you add them together in the function. Does that affect the output of the function?
 // No
 
-const add = (number1, number2, number3) => {
-    const sum = number2 + number3 + number1  
-    return sum
-}
-// console.log(add (17, 4, 11))
+// const add = (number1, number2, number3) => {
+//     let total = number1 + number2 + number3
+//     return total
+// }
+
+// const sum = add(17, 4, 11)
+
+// console.log(sum)
 
 // Self-driving cars
 
 const go = (direction, speed) => {
+    let sentence = ""
     
     if (speed > 75){
-    const tooFast = `The car is moving ${direction} at ${speed} mph. SLOW DOWN!`
-    return tooFast
+    sentence = `The car is moving ${direction} at ${speed} mph. SLOW DOWN!`
+    } else {
+    sentence = `The car is moving ${direction} at ${speed} mph.`
     }
-    const goingTheDistance = `The car is moving ${direction} at ${speed} mph.`
-    return goingTheDistance
+    return sentence
 }
 
-const moving = go ("forwards", 80)
+const movingCar = go ("forwards", 80)
 
-console.log(moving)
+console.log(movingCar)
